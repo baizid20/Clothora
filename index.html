@@ -13,12 +13,73 @@
     body {
       font-family: 'Montserrat', sans-serif;
     }
+    html {
+    scroll-behavior: smooth;
+  }
   </style>
 </head>
 <body class="bg-white text-gray-800">
+<!-- Smooth Scroll Behavior -->
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<!-- Dot Sidebar -->
+<div id="dot-sidebar" class="fixed top-1/2 right-6 transform -translate-y-1/2 hidden md:flex flex-col items-center z-50 space-y-6">
+
+  <a href="#home" data-target="home" class="dot-link group relative">
+    <span class="dot w-4 h-4 bg-gray-400 rounded-full border-2 border-white block transition-all"></span>
+    <span class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap">
+      Home
+    </span>
+  </a>
+
+  <a href="#featured" data-target="featured" class="dot-link group relative">
+    <span class="dot w-4 h-4 bg-gray-400 rounded-full border-2 border-white block transition-all"></span>
+    <span class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap">
+      Featured
+    </span>
+  </a>
+
+  <a href="#New-Arrivals" data-target="New-Arrivals" class="dot-link group relative">
+    <span class="dot w-4 h-4 bg-gray-400 rounded-full border-2 border-white block transition-all"></span>
+    <span class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap">
+      New Arrivals
+    </span>
+  </a>
+
+  <a href="#Reviews" data-target="Reviews" class="dot-link group relative">
+    <span class="dot w-4 h-4 bg-gray-400 rounded-full border-2 border-white block transition-all"></span>
+    <span class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap">
+      Reviews
+    </span>
+  </a>
+
+  <a href="#recommended" data-target="recommended" class="dot-link group relative">
+    <span class="dot w-4 h-4 bg-gray-400 rounded-full border-2 border-white block transition-all"></span>
+    <span class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap">
+      Recommended
+    </span>
+  </a>
+
+  <a href="#footer" data-target="footer" class="dot-link group relative">
+    <span class="dot w-4 h-4 bg-gray-400 rounded-full border-2 border-white block transition-all"></span>
+    <span class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap">
+      Footer
+    </span>
+  </a>
+
+</div>
+
+
+
+
+
 
   <!-- Header -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
+  <header  class="bg-white shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto flex items-center justify-between p-5">
       <a href="#" class="text-2xl font-bold uppercase tracking-widest text-gray-900 hover:text-pink-600 transition">Abaya</a>
       <nav class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wide text-gray-700">
@@ -46,7 +107,7 @@
     </nav>
   </header>
 <!-- Hero Section -->
-<section
+<section id="home"
   class="relative h-[600px] md:h-[700px] bg-cover bg-center bg-no-repeat mb-24"
   style="background-image: url('https://i.pinimg.com/originals/38/24/d7/3824d7011194ebf4799a86ee452587a0.jpg')"
 >
@@ -76,7 +137,7 @@
 </section>
 
 <!-- Category Section -->
-<section class="max-w-7xl mx-auto py-24 px-6 grid grid-cols-1 sm:grid-cols-3 gap-14">
+<section  class="max-w-7xl mx-auto py-24 px-6 grid grid-cols-1 sm:grid-cols-3 gap-14">
   <div
     class="flex flex-col items-center transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl rounded-lg fade-in-up"
     style="animation-delay: 0.2s;"
@@ -103,7 +164,7 @@
 </section>
 
 <!-- Featured Products Section -->
-<section class="max-w-7xl mx-auto py-24 px-6">
+<section id="featured" class="max-w-7xl mx-auto py-24 px-6">
   <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center tracking-wide uppercase">
     Featured Products
   </h2>
@@ -194,7 +255,7 @@
 </section>
 
 <!-- New Arrivals Section -->
-<section class="max-w-7xl mx-auto py-24 px-6">
+<section id="New-Arrivals" class="max-w-7xl mx-auto py-24 px-6">
   <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center tracking-wide uppercase">
     New Arrivals
   </h2>
@@ -285,7 +346,7 @@
 </section>
 
 <!-- Seasonal / Themed Collections Section -->
-<section class="max-w-7xl mx-auto py-24 px-6">
+<section id="Seasonal" class="max-w-7xl mx-auto py-24 px-6">
   <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center tracking-wide uppercase">
     Seasonal Collections
   </h2>
@@ -335,7 +396,7 @@
 </section>
 
 <!-- Trending Now Section -->
-<section class="max-w-7xl mx-auto px-6 py-24">
+<section id="Trending" class="max-w-7xl mx-auto px-6 py-24">
   <h2 class="text-4xl font-bold text-center text-gray-900 uppercase tracking-wide mb-12">
     Trending Now 
   </h2>
@@ -391,7 +452,7 @@
 </section>
 
 <!-- Lookbook Section -->
-<section class="max-w-7xl mx-auto px-6 py-24">
+<section id="Lookbook" class="max-w-7xl mx-auto px-6 py-24">
   <h2 class="text-4xl font-bold text-center text-gray-900 uppercase tracking-wide mb-16">
     Lookbook 
   </h2>
@@ -455,7 +516,7 @@
     
 <!-- Customer Favorites & Reviews -->
 
-<section class="bg-white py-10 px-6 max-w-4xl mx-auto">
+<section id="Reviews" class="bg-white py-10 px-6 max-w-4xl mx-auto">
   <h2 class="text-3xl font-semibold mb-8 text-center text-gray-900">Customer Reviews</h2>
   <div class="space-y-6">
 
@@ -495,18 +556,230 @@
   </div>
 </section>
 
+<!-- Bundles and sets -->
+<section id="bundles" class="w-full bg-gray-50 py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center text-gray-900 uppercase tracking-wide mb-16">
+      Bundles & Sets
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16 justify-center justify-items-center">
+      <!-- Bundle Card 1 -->
+      <div class="group bg-white rounded-3xl shadow-xl overflow-hidden cursor-pointer transition-transform transform hover:scale-105 hover:shadow-2xl max-w-sm w-full">
+        <img
+          src="https://static.zara.net/assets/public/9b2c/c748/95bc440c9cf6/317748258d1d/01821121712-e3/01821121712-e3.jpg?ts=1752069083831&w=563"
+          alt="Summer Combo Pack"
+          class="w-full h-64 object-cover"
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition">
+            Summer Combo Pack
+          </h3>
+          <p class="text-gray-700 font-medium mb-4">
+            Save 20% on this bundle of summer essentials.
+          </p>
+          <p class="text-lg font-bold text-pink-600 mb-6">$150</p>
+          <button
+            class="w-full bg-pink-600 text-white font-semibold py-3 rounded-2xl hover:bg-pink-700 transition"
+          >
+            Buy Bundle
+          </button>
+        </div>
+      </div>
+
+      <!-- Bundle Card 2 -->
+      <div class="group bg-white rounded-3xl shadow-xl overflow-hidden cursor-pointer transition-transform transform hover:scale-105 hover:shadow-2xl max-w-sm w-full">
+        <img
+          src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80"
+          alt="Winter Essentials Set"
+          class="w-full h-64 object-cover"
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition">
+            Winter Essentials Set
+          </h3>
+          <p class="text-gray-700 font-medium mb-4">
+            Cozy up with this winter set & save 25%.
+          </p>
+          <p class="text-lg font-bold text-pink-600 mb-6">$200</p>
+          <button
+            class="w-full bg-pink-600 text-white font-semibold py-3 rounded-2xl hover:bg-pink-700 transition"
+          >
+            Buy Bundle
+          </button>
+        </div>
+      </div>
+
+      <!-- Bundle Card 3 -->
+      <div class="group bg-white rounded-3xl shadow-xl overflow-hidden cursor-pointer transition-transform transform hover:scale-105 hover:shadow-2xl max-w-sm w-full">
+        <img
+          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400&q=80"
+          alt="Fitness Combo Set"
+          class="w-full h-64 object-cover"
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition">
+            Fitness Combo Set
+          </h3>
+          <p class="text-gray-700 font-medium mb-4">
+            All you need to kickstart your fitness journey.
+          </p>
+          <p class="text-lg font-bold text-pink-600 mb-6">$180</p>
+          <button
+            class="w-full bg-pink-600 text-white font-semibold py-3 rounded-2xl hover:bg-pink-700 transition"
+          >
+            Buy Bundle
+          </button>
+        </div>
+      </div>
+
+      <!-- Bundle Card 4 -->
+      <div class="group bg-white rounded-3xl shadow-xl overflow-hidden cursor-pointer transition-transform transform hover:scale-105 hover:shadow-2xl max-w-sm w-full">
+        <img
+          src="https://www.mymodefa.com/cdn/shop/files/modefa-shawl-mink-comfort-hijab-shawl-mink-31989545631878_1800x1800.jpg?v=1697042735"
+          alt="Hijab collection"
+          class="w-full h-64 object-cover"
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition">
+            Your first Modest
+          </h3>
+          <p class="text-gray-700 font-medium mb-4">
+          Elegant, comfortable modest wear for confident everyday style.
+          </p>
+          <p class="text-lg font-bold text-pink-600 mb-6">$210</p>
+          <button
+            class="w-full bg-pink-600 text-white font-semibold py-3 rounded-2xl hover:bg-pink-700 transition"
+          >
+            Buy Bundle
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="recommended" class="max-w-7xl mx-auto py-16 px-6">
+  <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center tracking-wide uppercase">
+    Recently Viewed / Recommended For You
+  </h2>
+
+  <div class="flex overflow-x-auto space-x-6 scrollbar-thin scrollbar-thumb-pink-500 scrollbar-track-gray-200">
+    
+    <!-- Product Card -->
+    <div class="min-w-[220px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer hover:shadow-xl transition p-4">
+      <img 
+        src="https://tse3.mm.bing.net/th/id/OIP._ksWtGYGDsHxWwBx1cyyYAHaJQ?r=0&cb=ucfimg2&pid=Api&ucfimg=1" 
+        alt="Classic White Dress" 
+        class="w-full h-40 object-cover rounded-md mb-3"
+      />
+      <h3 class="text-md font-semibold text-gray-900 mb-1">
+        Classic White Dress
+      </h3>
+      <p class="text-pink-600 font-semibold">$120</p>
+    </div>
+
+    <!-- Product Card -->
+    <div class="min-w-[220px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer hover:shadow-xl transition p-4">
+      <img 
+        src="https://i.pinimg.com/originals/4e/78/cd/4e78cd967141f41a8cbc34fbec3ab159.jpg" 
+        alt="Elegant Scarf" 
+        class="w-full h-40 object-cover rounded-md mb-3"
+      />
+      <h3 class="text-md font-semibold text-gray-900 mb-1">
+        Elegant Scarf
+      </h3>
+      <p class="text-pink-600 font-semibold">$45</p>
+    </div>
+
+    <!-- Product Card -->
+    <div class="min-w-[220px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer hover:shadow-xl transition p-4">
+      <img 
+        src="https://tse1.explicit.bing.net/th/id/OIP.BXOrs8uDUjd-OHge2FPTsQHaHa?r=0&pid=Api" 
+        alt="Leather Handbag" 
+        class="w-full h-40 object-cover rounded-md mb-3"
+      />
+      <h3 class="text-md font-semibold text-gray-900 mb-1">
+        Leather Handbag
+      </h3>
+      <p class="text-pink-600 font-semibold">$220</p>
+    </div>
+
+    <!-- Product Card -->
+    <div class="min-w-[220px] bg-white rounded-lg shadow-md flex-shrink-0 cursor-pointer hover:shadow-xl transition p-4">
+      <img 
+        src="https://thumbs.dreamstime.com/b/cheerful-trendy-muslim-woman-cheerful-trendy-muslim-woman-hijab-sunglasses-smiling-camera-beige-modern-289357372.jpg" 
+        alt="Stylish Sunglasses" 
+        class="w-full h-40 object-cover rounded-md mb-3"
+      />
+      <h3 class="text-md font-semibold text-gray-900 mb-1">
+        Stylish Sunglasses
+      </h3>
+      <p class="text-pink-600 font-semibold">$90</p>
+    </div>
+
+  </div>
+</section>
 
 
 
 
   <!-- Footer -->
    <!-- https://www.mymodefa.com/ -->
-  <footer class="bg-gray-900 text-white text-center py-6">
-    <p>&copy; 2025 Garnet Hill. All rights reserved.</p>
-    <p class="mt-1"><a href="#" class="hover:text-pink-600 underline">Privacy Policy</a> | <a href="#" class="hover:text-pink-600 underline">Terms of Service</a></p>
-  </footer>
+ <footer id="footer" class="bg-gray-900 text-gray-300 py-16 px-6">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
+    
+    <!-- Left: Brand & Info -->
+    <div class="flex flex-col space-y-3 md:w-1/3">
+      <h2 class="text-2xl font-bold uppercase tracking-widest text-white hover:text-pink-600 transition">Abaya</h2>
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Elevate your style with our premium collections. Quality & elegance in every product.
+      </p>
+      <p class="text-xs text-gray-500 mt-4">&copy; 2025 ABAYA. All rights reserved.</p>
+    </div>
 
-  <script>
+    <!-- Middle: Navigation Links -->
+    <div class="flex flex-col md:flex-row gap-8 md:gap-16 md:w-1/3">
+      <div>
+        <h3 class="text-white font-semibold mb-3 tracking-wide">Customer Care</h3>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li><a href="#" class="hover:text-pink-600 transition">Contact Us</a></li>
+          <li><a href="#" class="hover:text-pink-600 transition">FAQ</a></li>
+          <li><a href="#" class="hover:text-pink-600 transition">Returns & Exchanges</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold mb-3 tracking-wide">Policies</h3>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li><a href="#" class="hover:text-pink-600 transition">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-pink-600 transition">Terms of Service</a></li>
+          <li><a href="#" class="hover:text-pink-600 transition">Shipping Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right: Social Icons -->
+    <div class="md:w-1/3 flex flex-col items-start md:items-end space-y-4">
+      <h3 class="text-white font-semibold mb-3 tracking-wide">Follow Us</h3>
+      <div class="flex space-x-6 text-gray-400">
+        <a href="#" aria-label="Facebook" class="hover:text-pink-600 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.877v-6.987H7.898v-2.89h2.54v-2.203c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.196 2.238.196v2.462h-1.26c-1.243 0-1.63.772-1.63 1.562v1.873h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter" class="hover:text-pink-600 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 fill-current" viewBox="0 0 24 24"><path d="M22.162 5.656c-.793.352-1.646.59-2.543.696a4.456 4.456 0 001.956-2.454 8.842 8.842 0 01-2.814 1.075 4.433 4.433 0 00-7.552 4.041A12.588 12.588 0 013.164 4.936a4.43 4.43 0 001.372 5.911 4.417 4.417 0 01-2.007-.554v.056a4.432 4.432 0 003.555 4.342 4.49 4.49 0 01-2 .077 4.433 4.433 0 004.134 3.075 8.89 8.89 0 01-5.513 1.9c-.358 0-.713-.02-1.063-.062a12.532 12.532 0 006.792 1.991c8.15 0 12.605-6.753 12.605-12.605 0-.192-.004-.385-.013-.576a9.003 9.003 0 002.213-2.3z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram" class="hover:text-pink-600 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 fill-current" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.25 2a1 1 0 110 2 1 1 0 010-2zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/></svg>
+        </a>
+      </div>
+      <p class="text-gray-500 text-xs mt-2">Stay connected with us on social media.</p>
+    </div>
+
+  </div>
+</footer>
+
+
+<script>
     // Mobile menu toggle
     const btn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
@@ -515,5 +788,6 @@
     });
   </script>
 
+<script src="script.js"></script>
 </body>
 </html>
