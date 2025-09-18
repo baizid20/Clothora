@@ -1,95 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clothora - Premium Clothing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Garnet Hill Inspired Homepage</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
   <style>
+    /* Custom font for premium feel */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
     body {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Montserrat', sans-serif;
     }
   </style>
 </head>
-<body class="bg-white text-gray-900">
+<body class="bg-white text-gray-800">
 
-  <!-- Navbar -->
-  <header class="flex justify-between items-center p-6 shadow-md sticky top-0 bg-white z-50">
-    <h1 class="text-3xl font-bold tracking-tight">Clothora</h1>
-    <nav class="space-x-6 text-lg">
-      <a href="#" class="hover:text-indigo-600 transition">Home</a>
-      <a href="#" class="hover:text-indigo-600 transition">Shop</a>
-      <a href="#" class="hover:text-indigo-600 transition">About</a>
-      <a href="#" class="hover:text-indigo-600 transition">Contact</a>
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-5">
+      <a href="#" class="text-2xl font-bold uppercase tracking-widest text-gray-900 hover:text-pink-600 transition">Abaya</a>
+      <nav class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wide text-gray-700">
+        <a href="#" class="hover:text-pink-600 transition">Home</a>
+        <a href="#" class="hover:text-pink-600 transition">Shop</a>
+        <a href="#" class="hover:text-pink-600 transition">Sale</a>
+        <a href="#" class="hover:text-pink-600 transition">Inspiration</a>
+        <a href="#" class="hover:text-pink-600 transition">Contact</a>
+      </nav>
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button id="mobile-menu-btn" aria-label="Open menu" class="focus:outline-none focus:ring-2 focus:ring-pink-600">
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+            viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+      <a href="#" class="block px-5 py-3 text-gray-700 font-semibold uppercase hover:bg-pink-50 hover:text-pink-600 transition">Home</a>
+      <a href="#" class="block px-5 py-3 text-gray-700 font-semibold uppercase hover:bg-pink-50 hover:text-pink-600 transition">Shop</a>
+      <a href="#" class="block px-5 py-3 text-gray-700 font-semibold uppercase hover:bg-pink-50 hover:text-pink-600 transition">Sale</a>
+      <a href="#" class="block px-5 py-3 text-gray-700 font-semibold uppercase hover:bg-pink-50 hover:text-pink-600 transition">Inspiration</a>
+      <a href="#" class="block px-5 py-3 text-gray-700 font-semibold uppercase hover:bg-pink-50 hover:text-pink-600 transition">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="bg-gray-100 py-20 px-6 text-center">
-    <h2 class="text-4xl md:text-6xl font-bold mb-6">Elevate Your Style</h2>
-    <p class="text-lg md:text-xl mb-8 text-gray-600">Discover premium handcrafted pieces for the modern wardrobe.</p>
-    <a href="#" class="bg-black text-white px-6 py-3 rounded-md text-lg hover:bg-gray-800 transition">Explore Collection</a>
-  </section>
+<!-- Hero Section -->
+<section
+  class="relative h-[600px] md:h-[700px] bg-cover bg-center bg-no-repeat"
+  style="background-image: url('https://i.pinimg.com/originals/38/24/d7/3824d7011194ebf4799a86ee452587a0.jpg')"
+>
+  <div
+    class="absolute inset-0 bg-white bg-opacity-20 backdrop-blur-sm flex flex-col justify-center items-center text-center px-8 md:px-16 lg:px-24"
+  >
+    <h1
+      class="text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-4xl leading-snug tracking-widest drop-shadow-md"
+      style="text-shadow: 0 2px 6px rgba(0,0,0,0.3);"
+    >
+      Discover Timeless Elegance
+    </h1>
+    <p
+      class="mt-6 text-lg md:text-xl max-w-3xl font-normal text-white/90 tracking-wide leading-relaxed drop-shadow-sm"
+    >
+      Explore our curated collection of women's apparel, bedding, and home decor.
+    </p>
+    <a
+      href="#"
+      class="mt-10 inline-block bg-white bg-opacity-80 text-black font-semibold uppercase tracking-widest px-14 py-4 rounded-md shadow-md hover:bg-opacity-100 transition duration-300 ease-in-out"
+      aria-label="Shop Now"
+      style="letter-spacing: 0.12em;"
+    >
+      Shop Now
+    </a>
+  </div>
+</section>
 
-  <!-- Products Preview -->
-  <section class="py-20 px-6 max-w-7xl mx-auto">
-    <h3 class="text-3xl font-bold mb-12 text-center">Featured Products</h3>
-    <div class="grid md:grid-cols-3 gap-10">
-      <!-- Product 1 -->
-      <div class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-        <img src="https://source.unsplash.com/400x400/?fashion,clothes" alt="Product 1" class="w-full h-64 object-cover">
-        <div class="p-4">
-          <h4 class="text-xl font-semibold mb-2">Classic Linen Shirt</h4>
-          <p class="text-gray-600 mb-2">Comfort meets elegance with our signature shirt.</p>
-          <span class="font-bold text-lg">$59</span>
-        </div>
-      </div>
-      <!-- Product 2 -->
-      <div class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-        <img src="https://source.unsplash.com/400x400/?fashion,dress" alt="Product 2" class="w-full h-64 object-cover">
-        <div class="p-4">
-          <h4 class="text-xl font-semibold mb-2">Minimalist Dress</h4>
-          <p class="text-gray-600 mb-2">For the confident, graceful you.</p>
-          <span class="font-bold text-lg">$89</span>
-        </div>
-      </div>
-      <!-- Product 3 -->
-      <div class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-        <img src="https://source.unsplash.com/400x400/?fashion,jacket" alt="Product 3" class="w-full h-64 object-cover">
-        <div class="p-4">
-          <h4 class="text-xl font-semibold mb-2">Premium Denim Jacket</h4>
-          <p class="text-gray-600 mb-2">A timeless essential for all seasons.</p>
-          <span class="font-bold text-lg">$120</span>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- About Section -->
-  <section class="bg-white py-20 px-6">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-6">Our Story</h3>
-      <p class="text-gray-700 text-lg leading-relaxed">Clothora is more than just clothing. It's a statement. Rooted in sustainability and style, we create garments that resonate with confidence, comfort, and class. Every piece is designed to help you express your authentic self.</p>
-    </div>
-  </section>
+<!-- catagory section -->
 
-  <!-- Newsletter -->
-  <section class="bg-gray-900 text-white py-16 px-6">
-    <div class="max-w-3xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-4">Stay in the loop</h3>
-      <p class="mb-6 text-gray-300">Subscribe for exclusive updates, discounts, and styling tips.</p>
-      <form class="flex flex-col md:flex-row items-center justify-center gap-4">
-        <input type="email" placeholder="Enter your email" class="px-4 py-2 w-full md:w-2/3 rounded-md text-gray-900" required />
-        <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 transition px-6 py-2 rounded-md text-white">Subscribe</button>
-      </form>
-    </div>
-  </section>
+<section class="max-w-7xl mx-auto py-16 px-6 grid grid-cols-1 sm:grid-cols-3 gap-10">
+  <div
+    class="flex flex-col items-center transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl rounded-lg fade-in-up"
+    style="animation-delay: 0.2s;"
+  >
+    <img src="https://i.pinimg.com/originals/bc/ca/a7/bccaa7674e9d2dc7893962a6f536bc75.jpg" alt="Women's Fashion" class="w-36 h-36 rounded-full object-cover shadow-lg" />
+    <h3 class="mt-6 text-xl font-semibold text-gray-900">Women's Fashion</h3>
+  </div>
+
+  <div
+    class="flex flex-col items-center transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl rounded-lg fade-in-up"
+    style="animation-delay: 0.4s;"
+  >
+    <img src="https://bedandbathhomedecor.com/cdn/shop/files/T2107G_WEB_360x.jpg?v=1755877486" alt="Bedding & Home" class="w-36 h-36 rounded-full object-cover shadow-lg" />
+    <h3 class="mt-6 text-xl font-semibold text-gray-900">Bedding & Home</h3>
+  </div>
+
+  <div
+    class="flex flex-col items-center transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl rounded-lg fade-in-up"
+    style="animation-delay: 0.6s;"
+  >
+    <img src="https://static.zara.net/assets/public/8262/d710/8e0a45ff8aa4/8f987060ec05/02582406664-e1/02582406664-e1.jpg?ts=1756305758362&w=222" alt="Kids' Clothing" class="w-36 h-36 rounded-full object-cover shadow-lg" />
+    <h3 class="mt-6 text-xl font-semibold text-gray-900">Kids' Clothing</h3>
+  </div>
+</section>
+
 
   <!-- Footer -->
-  <footer class="bg-gray-100 py-6 text-center text-gray-600 text-sm">
-    <p>© 2025 Clothora. All rights reserved.</p>
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p>&copy; 2025 Garnet Hill. All rights reserved.</p>
+    <p class="mt-1"><a href="#" class="hover:text-pink-600 underline">Privacy Policy</a> | <a href="#" class="hover:text-pink-600 underline">Terms of Service</a></p>
   </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
